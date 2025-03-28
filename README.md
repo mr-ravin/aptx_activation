@@ -34,7 +34,7 @@ The APTx activation function is defined as:
 
 $\mathrm{APTx}(x) = (\alpha + \tanh(\beta x)) \cdot \gamma x$
 
-Where:
+where:
 - $\alpha$ controls the baseline shift (default: 1.0)
 - $\beta$ scales the input inside the tanh function (default: 1.0)
 - $\gamma$ controls the output amplitude (default: 0.5)
