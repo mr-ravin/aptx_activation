@@ -61,7 +61,7 @@ pip install git+https://github.com/mr-ravin/aptx_activation.git
 
 ### 📌 **Dependencies:**
 - Python >= 3.7
-- Pytorch >= 1.0
+- Pytorch >= 1.8.0
 
 ## Usage
 
