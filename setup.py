@@ -21,7 +21,7 @@ setup(
     ],
     keywords=[
         "APTx", "activation function", "deep learning", "pytorch", "neural networks",
-        "machine learning", "AI", "torch", "MISH", "SWISH", "ReLU", "aptx", "ML", "AI", "DL"
+        "machine learning", "AI", "ML", "DL", "torch", "Pytorch", "MISH", "SWISH", "ReLU" 
     ],
     license="MIT"
 )
