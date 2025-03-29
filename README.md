@@ -46,7 +46,7 @@ positive part of MISH.
 
 So, we can use $\alpha$ = 1 , $\beta$ = ½ and $\gamma$ = ½ values for the negative part, and $\alpha$ = 1 , $\beta$ = 1 and $\gamma$ = ½ for the positive part in case we want to closely approximate the MISH activation function.
 
-Interestingly, APTx function with parameters $\alpha$ = 1 , $\beta$ = ½ and $\gamma$ = ½ behaves like the SWISH(x, 1) activation function, and APTx with $\alpha$ = 1 , $\beta$ = 1 and $\gamma$ = ½ behaves like SWISH(x, 2).
+Interestingly, APTx function with parameters $\alpha$ = 1 , $\beta$ = ½ and $\gamma$ = ½ behaves like the SWISH(x, 1) activation function, and APTx with $\alpha$ = 1 , $\beta$ = 1 and $\gamma$ = ½ behaves like SWISH(x, 2). APTx generates the SWISH(x, $\rho$) activation function at parameters 𝞪 = 1 , 𝛽 = $\rho$/2 and γ = ½.
 
 ---
 ## 📥 Installation
