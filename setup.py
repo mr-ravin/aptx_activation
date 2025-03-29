@@ -7,7 +7,7 @@ with open("README.md", "r", encoding="utf-8") as f:
 
 setup(
     name="aptx_activation",
-    version="0.0.1",
+    version="0.0.2",
     author="Ravin Kumar",
     author_email="mr.ravin_kumar@hotmail.com",
     description="A PyTorch implementation of the APTx activation function.",
