@@ -17,7 +17,7 @@ APTx (Alpha Plus Tanh Times) is a novel activation function designed for computa
 **Other Sources**:
 - [Arxiv.org](https://arxiv.org/abs/2209.06119)
 - [Research Gate](https://www.researchgate.net/publication/364734055_APTx_Better_Activation_Function_than_MISH_SWISH_and_ReLU's_Variants_used_in_Deep_Learning), [Research Gate - Preprint](https://www.researchgate.net/publication/383019098_APTx_better_activation_function_than_MISH_SWISH_and_ReLU's_variants_used_in_deep_learning)
-- [Osf.io](https://osf.io/3249p_v1/)
+- [Osf.io](https://osf.io/3249p_v2/)
 - [SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4346892)
 - [Internet Archive](https://archive.org/details/aptx-activation-function-in-deep-learning-published-paper), [Internet Archive - Preprint](https://archive.org/details/aptx-activation-function)
 
