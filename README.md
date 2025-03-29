@@ -115,10 +115,10 @@ aptx = APTx(trainable=True)  # Learnable α, β, and γ
 - **Efficient Computation**: Requires fewer mathematical operations compared to MISH and SWISH.
 - **Faster Training**: The reduced complexity speeds up both forward and backward propagation.
 - **Lower Hardware Requirements**: Optimized for edge devices and low-end computing hardware.
-- **Parameter Flexibility - SWISH**: By setting $\alpha = 1$, $\beta = 0.5$, and $\gamma = 0.5$, APTx can replicate the SWISH(x, 1) activation function.
+- **Parameter Flexibility - SWISH**: By setting $\alpha = 1$, $\beta = 0.5$, and $\gamma = 0.5$, APTx exactly replicates the SWISH(x, 1) activation function.
 - **Parameter Flexibility - MISH**:
-  - By setting $\alpha = 1$, $\beta = 0.5$, and $\gamma = 0.5$, APTx can replicate the `negative domain` part of MISH activation function.
-  - By setting $\alpha = 1$, $\beta = 1$, and $\gamma = 0.5$, APTx can replicate the `positive domain` part of MISH activation function.
+  - By setting $\alpha = 1$, $\beta = 0.5$, and $\gamma = 0.5$, APTx closely replicates the `negative domain` part of MISH activation function.
+  - By setting $\alpha = 1$, $\beta = 1$, and $\gamma = 0.5$, APTx closely replicates the `positive domain` part of MISH activation function.
 
 ## Comparison of APTx with MISH, SWISH, and ReLU's variants
 - SWISH generally outperforms ReLU (and its variants) in deeper networks because it is smooth and non-monotonic, allowing better gradient flow.
