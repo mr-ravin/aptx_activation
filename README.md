@@ -20,6 +20,7 @@ APTx (Alpha Plus Tanh Times) is a novel activation function designed for computa
 - [Osf.io - version 2](https://osf.io/3249p_v2/), [Osf.io - version 1](https://osf.io/3249p_v1/)
 - [SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4346892)
 - [Internet Archive](https://archive.org/details/aptx-activation-function-in-deep-learning-published-paper), [Internet Archive - Preprint](https://archive.org/details/aptx-activation-function)
+- [Medium.com](https://medium.com/@ch.ravinkumar/aptx-a-powerful-alternative-to-mish-swish-and-relus-variants-1c97cd7ccc34)
 
 #### Github Repositories: 
 - **Github Repository** (Python Package- Pytorch Implementation): [Python Package](https://github.com/mr-ravin/aptx_activation)
