@@ -131,6 +131,21 @@ aptx = APTx(trainable=True)  # Learnable α, β, and γ
   - MISH requires more **computation**.
 - **APTx offers similar performance to MISH but with significantly lower computation costs**, making it ideal for resource-constrained environments.
 
+---
+
+#### Conclusion
+
+MISH has similar or even better performance than SWISH which is better than the
+rest of the activation functions. Our proposed activation function APTx behaves
+similar to MISH but requires lesser mathematical operations in calculating value in
+forward propagation, and derivatives in backward propagation. This allows APTx to
+train neural networks faster and be able to run inference on low-end computing
+hardwares such as neural networks deployed on low-end edge-devices with Internet of
+Things. Interestingly, using APTx one can also generate the SWISH(x, ρ) activation
+function at parameters 𝞪 = 1 , 𝛽 = ρ/2 and γ = ½.
+
+---
+
 ### 📜 Copyright License
 ```python
 Copyright (c) 2025 Ravin Kumar
