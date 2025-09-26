@@ -49,6 +49,8 @@ So, we can use $\alpha$ = 1, $\beta$ = ½, and $\gamma$ = ½ values for the nega
 
 Interestingly, APTx function with parameters $\alpha$ = 1 , $\beta$ = ½ and $\gamma$ = ½ behaves like the SWISH(x, 1) activation function, and APTx with $\alpha$ = 1, $\beta$ = 1, and $\gamma$ = ½ behaves like SWISH(x, 2). APTx generates the SWISH(x, $\rho$) activation function at parameters $\alpha$ = 1, $\beta = \rho/2$, and $\gamma$ = ½.
 
+Furthermore, choosing $\alpha$ = 1, $\beta ≈ 10^{6}$, and $\gamma$ = ½ yields a close approximation of the ReLU activation function. The approximation keeps improving as $\beta$ increases and converging to ReLU in the limit $\beta \to \infty$.
+
 ---
 ## 📥 Installation
 ```bash
