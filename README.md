@@ -17,7 +17,7 @@ APTx (Alpha Plus Tanh Times) is a novel activation function designed for computa
 **Other Sources**:
 - [Arxiv.org](https://arxiv.org/abs/2209.06119)
 - [Research Gate](https://www.researchgate.net/publication/364734055_APTx_Better_Activation_Function_than_MISH_SWISH_and_ReLU's_Variants_used_in_Deep_Learning), [Research Gate - Preprint](https://www.researchgate.net/publication/383019098_APTx_better_activation_function_than_MISH_SWISH_and_ReLU's_variants_used_in_deep_learning)
-- [Osf.io - version 2](https://osf.io/3249p_v2/), [Osf.io - version 1](https://osf.io/3249p_v1/)
+- [Osf.io - version 3](https://osf.io/3249p_v3/), [Osf.io - version 2](https://osf.io/3249p_v2/), [Osf.io - version 1](https://osf.io/3249p_v1/)
 - [SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4346892)
 - [Internet Archive](https://archive.org/details/aptx-activation-function-in-deep-learning-published-paper), [Internet Archive - Preprint](https://archive.org/details/aptx-activation-function)
 - [Medium.com](https://medium.com/@ch.ravinkumar/aptx-a-powerful-alternative-to-mish-swish-and-relus-variants-1c97cd7ccc34)
@@ -42,12 +42,12 @@ where:
 
 
 
-At $\alpha$ = 1, $\beta$ = ½ and $\gamma$ = ½ APTx closely maps the negative domain part of the APTx with the negative part of MISH. When $\alpha$ = 1 , $\beta$ = 1 and $\gamma$ = ½ the positive domain part of APTx closely maps with the
+At $\alpha$ = 1, $\beta$ = ½ and $\gamma$ = ½ APTx closely maps the negative domain part of the APTx with the negative part of MISH. When $\alpha$ = 1, $\beta$ = 1, and $\gamma$ = ½ the positive domain part of APTx closely maps with the
 positive part of MISH. 
 
-So, we can use $\alpha$ = 1 , $\beta$ = ½ and $\gamma$ = ½ values for the negative part, and $\alpha$ = 1 , $\beta$ = 1 and $\gamma$ = ½ for the positive part in case we want to closely approximate the MISH activation function.
+So, we can use $\alpha$ = 1, $\beta$ = ½, and $\gamma$ = ½ values for the negative part, and $\alpha$ = 1, $\beta$ = 1, and $\gamma$ = ½ for the positive part in case we want to closely approximate the MISH activation function.
 
-Interestingly, APTx function with parameters $\alpha$ = 1 , $\beta$ = ½ and $\gamma$ = ½ behaves like the SWISH(x, 1) activation function, and APTx with $\alpha$ = 1 , $\beta$ = 1 and $\gamma$ = ½ behaves like SWISH(x, 2). APTx generates the SWISH(x, $\rho$) activation function at parameters 𝞪 = 1 , 𝛽 = $\rho$/2 and γ = ½.
+Interestingly, APTx function with parameters $\alpha$ = 1 , $\beta$ = ½ and $\gamma$ = ½ behaves like the SWISH(x, 1) activation function, and APTx with $\alpha$ = 1, $\beta$ = 1, and $\gamma$ = ½ behaves like SWISH(x, 2). APTx generates the SWISH(x, $\rho$) activation function at parameters $\alpha$ = 1, $\beta = \rho/2$, and $\gamma$ = ½.
 
 ---
 ## 📥 Installation
@@ -122,6 +122,8 @@ aptx = APTx(trainable=True)  # Learnable α, β, and γ
 - **Parameter Flexibility - MISH**:
   - By setting $\alpha = 1$, $\beta = 0.5$, and $\gamma = 0.5$, APTx closely replicates the `negative domain` part of MISH activation function.
   - By setting $\alpha = 1$, $\beta = 1$, and $\gamma = 0.5$, APTx closely replicates the `positive domain` part of MISH activation function.
+- **Parameter Flexibility - ReLU**:
+  - By setting $\alpha = 1$, and $\gamma = 0.5$, with the approximation improving as $\beta$ increases and converging to ReLU in the limit $\beta \to \infty$. In practice, setting $\alpha = 1$, $\beta ≈ 10^{6}$, and $\gamma = 0.5$ already produces a close approximation of ReLU.
 
 ## Comparison of APTx with MISH, SWISH, and ReLU's variants
 - SWISH generally outperforms ReLU (and its variants) in deeper networks because it is smooth and non-monotonic, allowing better gradient flow.
@@ -142,7 +144,10 @@ forward propagation, and derivatives in backward propagation. This allows APTx t
 train neural networks faster and be able to run inference on low-end computing
 hardwares such as neural networks deployed on low-end edge-devices with Internet of
 Things. Interestingly, using APTx one can also generate the SWISH(x, ρ) activation
-function at parameters 𝞪 = 1 , 𝛽 = ρ/2 and γ = ½.
+function at parameters $\alpha$ = 1, $\beta = \rho/2$, and $\gamma$ = ½. Furthermore, 
+choosing $\alpha$ = 1, $\beta ≈ 10^{6}$, and $\gamma$ = ½ yields a close approximation of 
+the ReLU activation function.
+ 
 
 ---
 
