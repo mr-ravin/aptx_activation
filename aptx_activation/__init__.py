@@ -1,7 +1,7 @@
 import torch
 import torch.nn as nn
 
-__version__ = '0.0.5'
+__version__ = '0.0.6'
 
 class APTx(nn.Module):
     r"""The APTx (Alpha Plus Tanh Times) activation function: 
@@ -19,12 +19,10 @@ class APTx(nn.Module):
     """
     def __init__(self, alpha=1.0, beta=1.0, gamma=0.5, trainable=False):
         super().__init__()
-        
         # Convert to tensors first
         alpha = torch.as_tensor(float(alpha))
         beta = torch.as_tensor(float(beta))
         gamma = torch.as_tensor(float(gamma))
-
         if trainable:
             self.alpha = nn.Parameter(alpha)
             self.beta = nn.Parameter(beta)
@@ -37,14 +35,3 @@ class APTx(nn.Module):
     def forward(self, x):
         """Forward pass"""
         return (self.alpha + torch.tanh(self.beta * x)) * self.gamma * x
-
-    def extra_repr(self):
-        """Show trainable status in string representation"""
-        params = []
-        for name in ["alpha", "beta", "gamma"]:
-            tensor = getattr(self, name)
-            if isinstance(tensor, nn.Parameter):
-                params.append(f"{name}=TRAIN")
-            else:
-                params.append(f"{name}={tensor.item():.2f}")
-        return ", ".join(params)
